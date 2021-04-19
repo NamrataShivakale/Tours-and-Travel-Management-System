@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>International Tour Destination</title>
+<style>
+body {background-color:Lavender;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>International Tour Destination</h2>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+
+  <div class="column">
+    <img src="images/Dubai.jfif " alt="Dubai" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src=" images/Maldivs.jfif " alt="Maldivs" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src=" images/Nepal.jfif  " alt="Nepal" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src=" images/Srilanka.jfif  " alt="Srilanka" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+<hr>
+
+<p><h2>Dubai</h2>Top places and tourist attraction to visit in Dubai :Burj Khalifha,Wildwadi park,SKI Dubai,Emirates Towers.  
+.</p>
+
+<p><h2>Maldivs</h2>Top places and tourist attraction to visit in Maldives :Biyadhoo Beach,Fihalhohi Beach Resort,Fulhadhoo Beach,Gain Island
+
+</p>
+
+<p><h2>Nepal</h2> Top places and tourist attraction to visit in Nepal :Janakpur,Kathmandu,Nagarkot,Pokhara.
+</p>
+
+<p><h2>SriLanka</h2>Top places and tourist attraction to visit in Sri Lanka :Colombo,Kandy,Galle.</p>
+
+
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

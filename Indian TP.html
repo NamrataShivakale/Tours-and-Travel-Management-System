@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Indian Tour Destination</title>
+<style>
+body {background-color:Lavender;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>Indian Tour Destination</h2>
+
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="images/Rajasthan.jpg " alt="Rajasthan" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src=" images/Himachal.jfif" alt="Himachal" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src=" images/Kashmir.jfif" alt="Kashmir" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src=" images/Sikkim.jfif" alt="Sikkim" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+<hr>
+
+
+<p><h2>Rajasthan</h2>This tour starts with one of the Top Tourist Destinations in Rajashthan :Ajmer,Alwar,Bikaner,Bharatpur   
+giving you opportunity to try some adventure.</p>
+
+<p><h2>Himachal</h2>Right from a sightseeing tour in Shimla, to an adventure tour in Manali; from a spiritual visit to the Buddhist Monastery at Dharamshala
+ to a nature walk at Kalatop in Dalhousie, a complete tour of Himachal Pradesh is rendered in this package.
+</p>
+
+<p><h2>Kashmir</h2> This Kashmir holiday package includes sightseeing at the top destinations like Srinagar, Sonmarg, 
+Gulmarg and Pahalgam. The 5 nights 6 days Best of Kashmir holiday package shall begin with a tour of Srinagar and its 
+attractions like Mughal Gardens, Dal lake and Shankaracharya Temple. Enjoy a houseboat stay in Srinagar.
+</p>
+
+<p><h2>Sikkim</h2>This tour starts with one of the Top Tourist Destinations in Sikkim:Gangtok,Aritar,Lachung,Lachen  
+giving you opportunity to try some adventure.</p>
+
+
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
